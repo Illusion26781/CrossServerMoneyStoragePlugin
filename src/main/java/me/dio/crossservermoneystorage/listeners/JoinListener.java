@@ -22,6 +22,7 @@ public class JoinListener implements Listener {
 
         SQLManager manager = new SQLManager(main);
         try {
+
             main.getEconomy().depositPlayer(e.getPlayer(), manager.getBalance(e.getPlayer().getUniqueId()));
         } catch (SQLException throwables) {
             throwables.printStackTrace();

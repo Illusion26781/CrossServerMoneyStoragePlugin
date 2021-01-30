@@ -34,7 +34,7 @@ public class SQLManager {
     }
 
     public Double getBalance(UUID id) throws SQLException {
-        PreparedStatement statement = plugin.getMySQLConnection().prepareStatement(SQLOperations.OPTAIN);
+        PreparedStatement statement = plugin.getMySQLConnection().prepareStatement(SQLOperations.OBTAIN);
 
         statement.setString(1, id.toString());
 
