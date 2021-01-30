@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url = 'http://nexus.hc.to/content/repositories/pub_releases' }
+    maven { url = 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+    maven { url = 'https://repo.codemc.org/repository/maven-public/' }
+    maven { url = "http://repo.dmulloy2.net/nexus/repository/public/" }
+    maven { url = 'http://repo.extendedclip.com/content/repositories/placeholderapi'}
+    maven { url = 'https://mvn.intellectualsites.com/content/repositories/releases/'}
+    maven { url = "https://repo.glaremasters.me/repository/concuncan/" }
+
+    mavenLocal()
+
+
+}
+
+dependencies {
+
+    compileOnly 'org.spigotmc:spigot:1.16.4-R0.1-SNAPSHOT'
+    compile 'org.projectlombok:lombok:1.16.16'
+    annotationProcessor('org.projectlombok:lombok:1.16.16')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'de.tr7zw:item-nbt-api-plugin:2.1.0'
+    compile group: 'net.milkbowl.vault', name: 'Vault', version: '1.7.3'
+    compileOnly group: "com.grinderwolf", name: "slimeworldmanager-api", version: "2.2.1"
+
+}
